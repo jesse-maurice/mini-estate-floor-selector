@@ -22,7 +22,7 @@ export const ApartmentDetail = () => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case "available":
-        return "text-green-600 bg-green-50 border-green-200";
+        return "text-[#c85655] bg-white border-[#c85655]";
       case "sold":
         return "text-red-600 bg-red-50 border-red-200";
       case "reserved":
@@ -41,7 +41,7 @@ export const ApartmentDetail = () => {
         <div className="mb-8">
           <button
             onClick={setbackToApartment}
-            className="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200 mb-4 group"
+            className="flex items-center text-gray-900 hover:text-[#c85655] transition-colors duration-200 mb-4 group"
           >
             <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-200" />
             Back to Apartments
@@ -50,7 +50,7 @@ export const ApartmentDetail = () => {
           <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
             <div>
               <div className="flex items-center mb-2">
-                <Home className="w-6 h-6 text-blue-600 mr-2" />
+                <Home className="w-6 h-6 text-gray-900 mr-2" />
                 <h1 className="text-3xl font-bold text-gray-900">
                   Unit {apartment?.unit}
                 </h1>
@@ -131,7 +131,7 @@ export const ApartmentDetail = () => {
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center">
-                  <Maximize className="w-5 h-5 text-blue-600 mr-3" />
+                  <Maximize className="w-5 h-5 text-[#c85655] mr-3" />
                   <div>
                     <div className="font-semibold text-gray-900">
                       {apartment.area}
@@ -142,7 +142,7 @@ export const ApartmentDetail = () => {
 
                 {apartment.rooms > 0 && (
                   <div className="flex items-center">
-                    <Bed className="w-5 h-5 text-blue-600 mr-3" />
+                    <Bed className="w-5 h-5 text-[#c85655] mr-3" />
                     <div>
                       <div className="font-semibold text-gray-900">
                         {apartment?.rooms}
@@ -153,7 +153,7 @@ export const ApartmentDetail = () => {
                 )}
 
                 <div className="flex items-center">
-                  <Bath className="w-5 h-5 text-blue-600 mr-3" />
+                  <Bath className="w-5 h-5 text-[#c85655] mr-3" />
                   <div>
                     <div className="font-semibold text-gray-900">
                       {apartment?.bathrooms}
@@ -163,7 +163,7 @@ export const ApartmentDetail = () => {
                 </div>
 
                 <div className="flex items-center">
-                  <Home className="w-5 h-5 text-blue-600 mr-3" />
+                  <Home className="w-5 h-5 text-[#c85655] mr-3" />
                   <div>
                     <div className="font-semibold text-gray-900">
                       {apartment?.type}
@@ -190,7 +190,7 @@ export const ApartmentDetail = () => {
             {/* Action Button */}
             {apartment?.status === "available" && (
               <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <button className="w-full bg-gray-900 hover:bg-[#c85655] text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   Schedule a Viewing
                 </button>
                 <div className="text-center text-sm text-gray-500 mt-3">

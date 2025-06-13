@@ -2,46 +2,46 @@ import type { Apartment, Floor, Tower } from "types";
 
 export const towers: Tower[] = [
   {
-    id: "tower-a",
-    name: "Tower A",
-    description: "Premium residential tower with panoramic city views",
-    floors: 15,
-    color: "from-blue-500 to-blue-600",
+    id: "tower-north",
+    name: "North Tower",
+    description: "Sleek high-rise homes with curated design and skyline presence",
+    floors: 10,
+    color: "from-gray-700 to-gray-900",
     image:
       "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
-    id: "tower-b",
-    name: "Tower B",
-    description: "Modern living spaces with state-of-the-art amenities",
-    floors: 12,
-    color: "from-emerald-500 to-emerald-600",
+    id: "tower-east",
+    name: "East Tower",
+    description: "Minimalist residences framing tranquil urban vistas",
+    floors: 14,
+    color: "from-neutral-600 to-neutral-800",
     image:
-      "https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
-    id: "tower-c",
-    name: "Tower C",
-    description: "Luxury penthouse collection with exclusive features",
-    floors: 13,
-    color: "from-amber-500 to-amber-600",
+    id: "tower-west",
+    name: "West Tower",
+    description: "Bright open-plan spaces with uninterrupted citylines",
+    floors: 11,
+    color: "from-slate-600 to-slate-800",
     image:
       "https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
 ];
 
 const apartmentImages = [
-  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/3965541/pexels-photo-3965541.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/6585764/pexels-photo-6585764.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/6969862/pexels-photo-6969862.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/1212053/pexels-photo-1212053.jpeg?auto=compress&cs=tinysrgb&w=600",
 ];
 
 const layoutImages = [
-  "https://images.pexels.com/photos/6283968/pexels-photo-6283968.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/6283961/pexels-photo-6283961.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/6283969/pexels-photo-6283969.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/6283965/pexels-photo-6283965.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/4107280/pexels-photo-4107280.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800",
 ];
 
 const generateApartments = (
@@ -49,33 +49,33 @@ const generateApartments = (
   floorNumber: number
 ): Apartment[] => {
   const units = ["A", "B", "C", "D"];
-  const types = ["Studio", "1BR", "2BR", "3BR"];
+  const types = ["Studio", "1BR", "2BR", "Loft"];
 
   const features = [
-    ["Balcony", "City View", "Modern Kitchen"],
-    ["Walk-in Closet", "Ensuite", "Hardwood Floors"],
-    ["Floor-to-ceiling Windows", "Open Concept", "In-unit Laundry"],
-    ["Private Terrace", "Premium Finishes", "Smart Home Features"],
+    ["Balcony", "Compact Kitchen", "City View"],
+    ["Ensuite Bath", "Built-in Storage", "Natural Light"],
+    ["Dual Aspect layout", "Integrated Appliances", "Neutral tones"],
+    ["Open Mezzanine", "Skyline view", "Minimal detail"],
   ];
 
-  return units.map((unit, index) => ({
+  return units.map((unit, idx) => ({
     id: `${floorId}-${unit}`,
     floorId,
     unit: `${floorNumber}${unit}`,
-    type: types[index],
-    area: 450 + index * 200 + Math.floor(Math.random() * 100),
-    rooms: Math.floor(Math.random() * 3) + 1,
+    type: types[idx],
+    area: 420 + idx * 180 + Math.floor(Math.random() * 80),
+    rooms: Math.max(1, idx), // 0→1 room minimum
     bathrooms: Math.floor(Math.random() * 2) + 1,
     price:
-      450000 +
-      index * 150000 +
-      floorNumber * 10000 +
-      Math.floor(Math.random() * 50000),
-    thumbnail: apartmentImages[index],
-    layoutImage: layoutImages[index],
-    features: features[index],
+      400_000 +
+      idx * 130_000 +
+      floorNumber * 8_000 +
+      Math.floor(Math.random() * 40_000),
+    thumbnail: apartmentImages[idx],
+    layoutImage: layoutImages[idx],
+    features: features[idx],
     status:
-      Math.random() > 0.7
+      Math.random() > 0.6
         ? Math.random() > 0.5
           ? "sold"
           : "reserved"

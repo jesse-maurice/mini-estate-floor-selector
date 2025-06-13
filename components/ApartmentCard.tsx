@@ -13,7 +13,7 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case "available":
-        return "text-green-600 bg-green-50";
+        return "text-[#c85655] bg-green-50";
       case "sold":
         return "text-red-600 bg-red-50";
       case "reserved":
@@ -66,7 +66,7 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
             <h3 className="text-xl font-bold text-gray-900">
               {apartment.type}
             </h3>
-            <div className="text-lg font-bold text-blue-600">
+            <div className="text-lg font-bold text-[#c85655]">
               ${apartment.price.toLocaleString()}
             </div>
           </div>
@@ -102,7 +102,7 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
                 key={index}
                 className="text-xs text-gray-500 flex items-center"
               >
-                <div className="w-1 h-1 bg-blue-400 rounded-full mr-2" />
+                <div className="w-1 h-1 bg-[#c85655] rounded-full mr-2" />
                 {feature}
               </div>
             ))}

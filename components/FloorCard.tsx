@@ -48,7 +48,7 @@ export const FloorCard = ({
 
             <div className="flex items-center justify-center text-sm">
               <Users className="w-4 h-4 mr-1" />
-              <span className={2 > 0 ? "text-green-600" : "text-red-500"}>
+              <span className={2 > 0 ? "text-gray-900" : "text-red-500"}>
                 {availableUnits} Available
               </span>
             </div>
@@ -59,7 +59,7 @@ export const FloorCard = ({
         <div className="px-4 pb-4">
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div
-              className="bg-green-500 h-2 rounded-full transition-all duration-300"
+              className="bg-[#c85655] h-2 rounded-full transition-all duration-300"
               style={{ width: `${(availableUnits / totalUnits) * 100}%` }}
             />
           </div>

@@ -19,14 +19,14 @@ export const FloorView = () => {
         <div className="mb-8">
           <button
             onClick={setbackToTowers}
-            className="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200 mb-4 group"
+            className="flex items-center text-gray-900 hover:text-[#c85655] transition-colors duration-200 mb-4 group"
           >
             <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-200" />
             Back to Towers
           </button>
 
           <div className="flex items-center mb-4">
-            <Building2 className="w-8 h-8 text-blue-600 mr-3" />
+            <Building2 className="w-8 h-8 text-gray-900 mr-3" />
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
               {selectedTower?.name}
             </h1>
