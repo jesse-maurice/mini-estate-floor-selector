@@ -13,14 +13,14 @@ export const TowerOverview = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
-            <Building2 className="w-12 h-12 text-blue-600 mr-3" />
+            <Building2 className="w-12 h-12 text-gray-900 mr-3" />
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Skyline Residences
+              Monochrome Residences
             </h1>
           </div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Discover premium living spaces in our award-winning towers. Each
-            residence offers unparalleled luxury and breathtaking views.
+            Refined living in clean lines and quiet tones. Experience timeless
+            design and elevated city views from every residence.
           </p>
         </div>
 

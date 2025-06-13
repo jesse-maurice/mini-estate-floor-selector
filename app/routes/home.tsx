@@ -3,8 +3,8 @@ import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Mini E-state prototype" },
-    { name: "description", content: "Skyline Residences" },
+    { title: "Mini Estate Floor Selector" },
+    { name: "description", content: "Monochrome" },
   ];
 }
 
